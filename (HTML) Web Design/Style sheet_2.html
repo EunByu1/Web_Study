@@ -1,0 +1,58 @@
+<!-- 5장 실습 예제 6번 -->
+
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title>animation</title>
+
+        <Style>
+            body{
+                background-color:rgb(38, 43, 43);
+            }
+            hr{
+                color:rgba(255, 255, 255, 0.701);
+            }
+            header h1{
+                text-align: center;
+                font-family: Comic sans MS;
+                color:rgba(255, 255, 255, 0.76);
+            }
+            @keyframes spongebob {
+                50%{transform : rotate(90deg)}
+                100%{transform: rotate(-90deg);}
+            }
+            img{
+                animation-name: spongebob;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            img.static{
+                position: relative;
+                top:210px;
+                left:410px;
+            }
+            section{
+                background-image: url("https://obj-sg.thewiki.kr/data/436f6d70616e795f5069636e69635f3036362e706e67.png");
+                background-size: 900px 500px;
+                background-repeat: no-repeat;
+                height:50000px;
+                width:50000px;
+            }
+
+        </Style>
+    </head>
+
+
+    <body>
+        <header>
+            <hr>
+            <h1> Dizzy Spongebob </h1>
+            <hr>
+        </header>
+
+        <section>
+            <article>
+                <img src="https://i.gifer.com/3Mm2.gif" width="240" height="250" class="static">
+            </article>
+        </section>

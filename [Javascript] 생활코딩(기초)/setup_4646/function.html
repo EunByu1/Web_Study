@@ -1,0 +1,98 @@
+<!-- 함수(Function) -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script type = "text/javascript">
+            // (1) 함수 정의 및 호출
+            function numbering()
+            {
+                var i = 0;
+                
+                while(i < 10)
+                {
+                    document.write(i + 1 + "<br>");
+                    i++;
+                }
+            }
+            numbering();
+
+
+            // (2) return 
+            function get_member1()
+            {
+                return 'egoing';
+            }
+
+            function get_member2()
+            {
+                return 'k8805';
+            }
+
+            alert(get_member1());
+            alert(get_member2());
+
+
+            // (3) 인자(argument)
+            function get_argument(arg)
+            {
+                return arg;
+            }
+            
+            alert(get_argument(1));
+            alert(get_argument(2));
+
+
+            // (4) 매개변수(parameter)
+            function get_arguments(arg1, arg2)
+            {
+                return arg1 + arg2
+            }
+
+            alert(get_arguments(10, 20));
+            alert(get_arguments(20, 30));
+
+
+            // (5) 다양한 정의 방법 
+            numbering = function()
+            {
+                i = 0;
+                
+                while(i < 10)
+                {
+                    document.write(i);
+                    i += 1;
+                }
+            }
+
+            /* function numbering()
+            {
+                i = 0;
+                
+                while(i < 10)
+                {
+                    document.write(i);
+                    i += 1;
+                }
+            } */
+            numbering();
+
+            
+            // (6) 익명 함수 : 함수명X, 정의 & 호출 동시에
+            (function ()
+            {
+                i = 0;
+                
+                while(i < 10)
+                {
+                    document.write(i);
+                    i += 1;
+                }
+            }) (); 
+        </script>
+    </body>
+</html>

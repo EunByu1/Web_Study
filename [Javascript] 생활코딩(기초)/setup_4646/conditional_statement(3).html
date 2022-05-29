@@ -1,0 +1,46 @@
+<!-- 조건문의 응용 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script type = "text/javascript">
+            // (1) 변수와 비교연산자
+            var a = 1;
+
+            if(a === 1)
+            {
+                alert(a);
+            }
+
+
+            // (2) prompt 명령어 → prompt 창 출력
+            prompt("당신의 나이는?");
+
+
+            // (3) 응용
+            var id = prompt("아이디를 입력해주세요.");
+
+            if(id === "eunbyul")
+            {
+                var password = prompt("비밀번호를 입력해주세요.");
+
+                if(password === "111111")
+                {
+                    alert("로그인 하셨습니다.\n" + id + "님 반갑습니다.");
+                }
+                else
+                {
+                    alert("비밀번호가 일치하지 않습니다.")
+                }
+            }
+            else
+            {
+                alert("아이디가 일치하지 않습니다.");
+            }
+        </script>
+    </body>
+</html>

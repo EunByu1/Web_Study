@@ -1,0 +1,38 @@
+<!-- 객체 문법 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script type = "text/javascript">
+            // (1) 객체 생성 
+            var grades = {"egoing" : 80, "K8005" : 6, "sorialgi" : 80};
+            
+            /* 
+            var grades = {};
+            grades["egoing"]   = 10;
+            grades["K8005"]    = 6;
+            grades["sorialgi"] = 80;
+            */
+
+            /*
+            var grades = new Object();
+            grades["egoing"]   = 10;
+            grades["K8805"]    = 6;
+            grades["sorialgi"] = 80;
+            */
+
+            // (2) 객체에서 필요한 값 추출
+            alert(grades["egoing"]);
+            alert(grades["K8005"]);
+            alert(grades["sorialgi"]);
+
+            alert(grades.egoing);
+            alert(grades.K8005);
+            alert(grades.sorialgi);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+// [1] 변수 선언
+let age = 25;
+console.log(age); // 25
+
+age = 30;
+console.log(age); // 30
+
+let a_$ge = 45;
+console.log(a_$ge); // 45
+
+let age6 = 15;
+console.log(age6); // 15
+
+// [2] 상수 선언
+const Age = 5;
+console.log(Age); // 5

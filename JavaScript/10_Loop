@@ -1,0 +1,35 @@
+// [ 반복문 ]
+// --------------------------------------------------
+// ① 배열 순회
+const arr = ["a", "b", "c"];
+
+for (let i = 0; i < arr.length; i++) {
+  // 반복 수행할 명령
+  console.log(arr[i]);
+}
+
+
+// ② 객체 순회
+let person = {
+  name: "이정환",
+  age: 25,
+  tall: 175
+};
+
+// person 객체의 Key들을 배열로 반환
+const personKeys = Object.keys(person); 
+console.log(personKeys);
+
+for (let i = 0; i < personKeys.length; i++) {
+  const curKey = personKeys[i];
+  const curValue = person[curKey];
+  console.log(`${curKey} : ${curValue}`);
+}
+
+// person 객체의 Value들을 배열로 반환
+const personValues = Object.values(person); 
+
+for (let i = 0; i < personValues.length; i++) {
+  console.log(personValues[i]);
+}
+// --------------------------------------------------

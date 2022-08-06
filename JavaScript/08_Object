@@ -2,28 +2,28 @@
 // -----------------------------------------------------------------------------------------
 // ① 객체 생성 및 프로퍼티 접근
 let person_1 = new Object(); // 1.객체 생성 방법 - 객체 생성자 방식
-let person_2 = {
+let person_2 = {             // 2.객체 생성 방법 - 객체 리터럴 방식
   key: "value",
   key1: "value2",
   key2: true,
   key3: undefined,
   key4: [1, 2],
   key5: function () {}
-}; // 2.객체 생성 방법 - 객체 리터럴 방식
+}; 
 
 console.log(person_2.key1);
 console.log(person_2.key2);
 
 let person = {
   name: "이정환", // 멤버
-  age: 25, // 멤버
+  age: 25,       // 멤버
   say: function () {
     console.log(`안녕 나는 ${this.name}`);
     console.log(`안녕 나는 ${this["name"]}`);
   } // 메서드
 };
 
-console.log(person.name); // 점 표기법
+console.log(person.name);    // 점 표기법
 console.log(person["name"]); // 괄호 표기법
 
 console.log(getPrpertyValue("name"));
@@ -58,8 +58,8 @@ console.log(person_3.name);
 console.log(person_3.age);
 
 // 프로퍼티 삭제
-delete person_3.age; // 삭제했다해도 메모리에 남아있음
-delete person_3["name"]; // 삭제했다해도 메모리에 남아있음
+delete person_3.age;      // 삭제했다해도 메모리에 남아있음
+delete person_3["name"];  // 삭제했다해도 메모리에 남아있음
 
 person_3.location = null; // [추천] 삭제한것과 똑같은 효
 console.log(person_3);

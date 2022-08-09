@@ -1,0 +1,44 @@
+// [ Spread 연산자 ]
+// --------------------------------------------------------------------------------
+// ① 객체 - Spread 연산자
+const cookie = {
+  base: "cookie",
+  madeIn: "korea"
+};
+
+const chocochipCookie = {
+  ...cookie,
+  toping: "chocochip"
+};
+
+const blueberryCookie = {
+  ...cookie,
+  toping: "blueberry"
+};
+
+const strawberryCookie = {
+  ...cookie,
+  toping: "strawberry"
+};
+
+console.log(chocochipCookie);
+console.log(blueberryCookie);
+console.log(strawberryCookie);
+
+
+
+// ② 배열 - Spread 연산자
+const noTopingCookies = ["촉촉한 쿠기", "안촉촉한 쿠기"];
+const TopingCookies = [
+  "바나나 쿠키",
+  "블루베리 쿠키",
+  "딸기 쿠기",
+  "초코칩 쿠키"
+];
+
+const allCookies_1 = [...noTopingCookies, "함정 쿠기", ...TopingCookies];
+console.log(allCookies_1);
+
+const allCookies_2 = noTopingCookies.concat(TopingCookies);
+console.log(allCookies_2);
+// --------------------------------------------------------------------------------

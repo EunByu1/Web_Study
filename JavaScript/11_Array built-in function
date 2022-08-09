@@ -1,0 +1,158 @@
+// [ 배열 내장 함수]
+// --------------------------------------------------------
+// ① 순회 
+const arr = [1, 2, 3, 4];
+
+arr.forEach((elm) => console.log(elm));
+arr.forEach(function (elm) {
+  console.log(elm);
+});
+
+arr.forEach((elm) => console.log(elm * 2));
+arr.forEach(function (elm) {
+  console.log(elm * 2);
+});
+
+
+
+// ② 순회 -> 배열로 저장
+const newArr_1 = [];
+
+// (1) - 방법
+arr.forEach(function (elm) {
+  console.log(`elm * 2 : ${elm * 2}`);
+
+  newArr_1.push(elm * 2);
+  console.log(`newArr_1 elm * 2 : ${elm * 2}`);
+});
+
+// (2) - 방법
+const newArr_2 = arr.map((elm) => {
+  return elm * 2;
+});
+
+console.log(newArr_2);
+
+
+
+// ③ 배열 내 값 존재 여부 확인
+let number = 3;
+
+// (1) - 방법
+arr.forEach((elm) => {
+  if (elm === number) {
+    console.log(true);
+  }
+});
+
+// (2) - 방법
+console.log(arr.includes(number));
+
+
+
+// ④ 배열 내 값 존재 시 해당 인덱스 반환
+console.log(arr.indexOf(number));
+
+
+
+// ⑤ 객체 배열 내 해당 값에 대한 인덱스 반환
+const Object_arr = [
+  { color: "red" },
+  { color: "black" },
+  { color: "blue" },
+  { color: "green" }
+];
+
+console.log(Object_arr.findIndex((elm) => elm.color === "green"));
+console.log(Object_arr[Object_arr.findIndex((elm) => elm.color === "green")]);
+console.log(
+  Object_arr[
+    Object_arr.findIndex(function (elm) {
+      return elm.color === "green";
+    })
+  ]
+);
+
+
+
+// ⑥ 객체 배열 내 해당 값에 대한 인덱스 추출 후 해당 값 반환
+const element = Object_arr.find((elm) => elm.color === "green");
+console.log(element);
+
+
+
+// ⑦ 필터링
+const filtering_Arr = [
+  { num: 1, color: "red" },
+  { num: 2, color: "black" },
+  { num: 3, color: "blue" },
+  { num: 4, color: "green" },
+  { num: 5, color: "blue" }
+];
+
+console.log(filtering_Arr.filter((elm) => elm.color === "blue"));
+
+
+
+// ⑧ 배열 슬라이싱
+console.log(arr.slice(0, 2));
+
+
+
+// ⑨ 배열 합치기
+const arr1 = [
+  { num: 1, color: "red" },
+  { num: 2, color: "black" },
+  { num: 3, color: "blue" }
+];
+
+const arr2 = [
+  { num: 4, color: "green" },
+  { num: 5, color: "blue" }
+];
+
+console.log(arr1.concat(arr2));
+
+
+
+// ⑩ 배열 정렬 1탄 - 문자열 배열
+let chars = ["나", "다", "가"];
+
+chars.sort();
+console.log(chars);
+
+
+
+// ⑪ 배열 정렬 2탄 - 숫자 배열
+let nums = [0, 1, 3, 2, 10, 30, 20];
+
+// 오름차순
+const compare = (a, b) => {
+  // 1. 크다
+  if (a > b) {
+    return 1; // 크면 뒤로 감
+    // 내림차순이라면
+    // return -1;
+  }
+
+  // 2. 작다
+  if (a < b) {
+    return -1; // 작으면 앞으로 감
+    // 내림차순이라면
+    // return 1;
+  }
+
+  // 3. 같다
+  return 0; // 같으면 그대로 있음
+};
+nums.sort(compare);
+console.log(nums);
+
+
+
+// ⑫ 배열 내의 모든 요소들을 문자열로 합치기
+const arr3 = ["이정환", "님", "안녕하세요", "또 오셨군요"];
+
+console.log(arr3.join());
+console.log(arr3.join(" "));
+// --------------------------------------------------------

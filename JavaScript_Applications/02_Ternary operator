@@ -1,0 +1,70 @@
+// [ 삼항 연산자 ]
+// --------------------------------------------------------------
+// ① 삼항 연산자 X
+let a = 3;
+
+if (a >= 0) {
+  console.log("양수");
+} else {
+  console.log("음수");
+}
+
+
+
+// ② 삼항 연산자 O
+// 조건식 ? 조건식이 true일 경우 실행문 : 조건식이 false일 경우 실행문
+a >= 0 ? console.log("양수") : console.log("음수");
+
+
+
+// ③-1) 예시
+a = [];
+
+if (a.length === 0) {
+  // 빈 배열일 경우 실행
+  console.log("빈 배열 O");
+} else {
+  console.log("빈 배열 X");
+}
+
+a.length === 0 ? console.log("빈 배열 O") : console.log("빈 배열 X");
+
+
+
+// ③-2) 예시
+a = [1, 23];
+
+const arrayStatus = a.length === 0 ? "빈 배열 O" : "빈 배열 X";
+console.log(arrayStatus);
+
+
+
+// ③-3) 예시
+let b = [];
+
+const result = b ? true : false;
+console.log(result);
+
+
+
+// TODO : 학점 계산 프로그램
+// 90점 이상 A+
+// 50점 이상 B+
+// 둘다 아니면 F
+
+let score = 100;
+
+if (score >= 90) {
+  console.log("A+");
+} else if (score >= 50) {
+  console.log("B+");
+} else {
+  console.log("F");
+}
+
+score >= 90
+  ? console.log("A+")
+  : score >= 50
+  ? console.log("B+")
+  : console.log("F");
+// --------------------------------------------------------------

@@ -1,0 +1,48 @@
+// [ 단락 회로 평가 ]
+// ---------------------------------------------
+// ① 논리 연산자
+// (1) AND 연산자
+console.log(true && true);
+
+// (2) OR 연산자
+console.log(true || true);
+
+// (3) NOT 연산자
+console.log(!true);
+
+
+
+// ② 단락 회로 평가 사용 X - 함수
+const getName_1 = (person) => {
+  if (!person) {
+    return "객체가 아닙니다";
+  }
+  return person.name;
+};
+
+let person;
+const name_1 = getName_1(person);
+console.log(name_1);
+
+
+
+// ③-1) 단락 회로 평가 사용 O - 함수 (Falsy)
+const getName_2 = (person) => {
+  return person && person.name;
+};
+
+const name_2 = getName_2(person);
+console.log(name_2);
+
+
+
+// ③-2) 단락 회로 평가 사용 O - 함수 (Falsy)
+const getName_3 = (person) => {
+  const name = person && person.name;
+  return name || "객체가 아닙니다";
+};
+
+person = { name: "이정환" };
+const name_3 = getName_3(person);
+console.log(name_3);
+// ---------------------------------------------

@@ -1,0 +1,30 @@
+// [ Truthy & Falsy ]
+// --------------------------------------------------------
+const getName_1 = (person) => {
+  if (person === undefined || person === null) {
+    return "객체가 아닙니다";
+  }
+  return person.name;
+};
+
+let person; // undefined
+const name_1 = getName_1(person);
+console.log(name_1);
+
+person = null;
+const name_2 = getName_1(person);
+console.log(name_2);
+
+
+
+// Falsy 속성
+const getName_2 = (person) => {
+  if (!person) {
+    return "객체가 아닙니다";
+  }
+  return person.name;
+};
+
+const name_3 = getName_2(person);
+console.log(name_3);
+// --------------------------------------------------------

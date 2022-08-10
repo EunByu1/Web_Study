@@ -1,0 +1,62 @@
+// [ 동기 & 비동기 ]
+// ----------------------------------------------------
+// ① 동기 방식
+function taskA() {
+  console.log("A 작업 끝");
+}
+
+taskA();
+console.log("코드 끝");
+
+
+
+// ②-1) 비동기 방식
+function task_A(a, b, cb) {
+  setTimeout(() => {
+    const res = a + b;
+    cb(res);
+  }, 3000); // 3s 기다림
+}
+
+function task_B(a, cb) {
+  setTimeout(() => {
+    const res = a * 2;
+    cb(res);
+  }, 1000); // 1s 기다림
+}
+
+function task_C(a, cb) {
+  setTimeout(() => {
+    const res = a * -1;
+    cb(res);
+  }, 2000); // 2s 기다림
+}
+
+task_A(3, 4, (res) => {
+  console.log("A TASK RESULT : ", res);
+});
+console.log("코드 끝");
+
+task_B(7, (res) => {
+  console.log("B TASK RESULT : ", res);
+});
+
+task_C(14, (res) => {
+  console.log("C TASK RESULT : ", res);
+});
+
+
+
+// ②-2) 비동기 방식
+task_A(4, 5, (a_res) => {
+  console.log("A RESULT : ", a_res);
+  task_B(a_res, (b_res) => {
+    console.log("B RESULT : ", b_res);
+    task_C(b_res, (c_res) => {
+      console.log("C RESULT : ", c_res);
+    });
+  });
+});
+
+console.log("코드 끝");
+// ----------------------------------------------------

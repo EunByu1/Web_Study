@@ -1,0 +1,24 @@
+// [ 함수 표현식과 화살표 함수]
+// -------------------------------------
+// ① 함수 표현식 & 함수 선언식
+console.log(helloB());
+
+let helloA = function () {
+  return "안녕하세요 여러분";
+}; // 함수 표현식
+console.log(helloA());
+
+function helloB() {
+  return "안녕하세요 여러분";
+} // 함수 선언식
+
+
+// ② 화살표 함수
+let helloc = () => "안녕하세요 여러분";
+console.log(helloc());
+
+let hellod = () => {
+  return "안녕하세요 여러분";
+};
+console.log(hellod());
+// ------------------------------------- 

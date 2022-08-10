@@ -1,0 +1,19 @@
+// [ API & Fetch ]
+// --------------------------------------------------------------------------------------
+// API 호출
+//  : 특정 서버에 Data 요청하고, 받아보기
+
+async function getData() {
+  // json형식으로 되어있는 Data들이 Response로 포장되어 있음
+  let rawResponse = await fetch("https://jsonplaceholder.typicode.com/posts");  
+  
+  // Response로 포장되어 있는 것을 json으로 뜯어버림
+  let jsonResponse = await rawResponse.json();  
+  console.log(jsonResponse);
+}
+
+// fetch() : API 호출을 할 수 있도록 도와주는 내장 함수임
+//           -> API 호출 성공 시 API 성공 객체 자체를 반환해줌
+
+getData();
+// --------------------------------------------------------------------------------------

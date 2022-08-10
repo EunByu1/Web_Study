@@ -1,0 +1,29 @@
+// [ 함수 ]
+// ------------------------------------------------------------
+// ① 반환값 X
+function getArea1(width, height) {
+  let area = width * height;
+  console.log(area);
+} // 함수 선언식
+
+getArea1(1, 200); // 함수 호출
+getArea1(2, 200);
+getArea1(3, 200);
+getArea1(4, 200);
+getArea1(5, 200);
+getArea1(6, 200);
+getArea1(7, 200);
+getArea1(8, 200);
+getArea1(9, 200);
+getArea1(10, 200);
+console.log("함수 실행 완료");
+
+
+// ② 반환값 O
+function getArea2(width, height) {
+  let area = width * height;
+  return area;
+} // 함수 선언식
+
+console.log(`반환값 : ${getArea2(1, 200)} | 함수 실행 완료`);
+// ------------------------------------------------------------

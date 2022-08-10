@@ -1,0 +1,48 @@
+// [ Primitive Type ]
+// ----------------------------------------------
+// ① 숫자형
+let age = 25;                 // 정수
+let tall = 175.9;             // 실수
+let inf = Infinity;           // 무한대
+let minusInf = -Infinity;     // 음의 무한대
+let nan = NaN;                // 수학적인 연산에 실패의 결과값
+
+console.log(age + tall);
+
+
+// ② 문자열
+let name_1 = "Eunbyul";                   // 문자열
+let name_2 = "winterlood";                // 문자열
+let name_3 = `Don't Give up ${name_1}`;   // 문자열
+
+console.log(name_3);
+
+
+// ③ 불린형
+let isSwitchOff = true; // 참
+let isSwitchOn = false; // 거짓
+
+
+// ④ null
+let a = null;
+console.log(a);
+
+
+// ⑤ undefined
+let variable;
+console.log(variable);
+// ----------------------------------------------
+
+
+
+// [ 형 변환 ]
+// ----------------------------------------------
+let numberA = 12;
+let numberB = "2";
+
+console.log(numberA * numberB);           // 묵시적 형 변환
+// JS가 문자열 2를 자동으로 숫자 2로 인지함
+
+console.log(numberA + numberB);           // 묵시적 형 변환
+console.log(numberA + parseInt(numberB)); // 명시적 형 변환
+// ----------------------------------------------

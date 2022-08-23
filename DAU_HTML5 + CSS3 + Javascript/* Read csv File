@@ -1,0 +1,11 @@
+// Import dependencies
+const csv = require("csvtojson");
+
+(async () => {
+
+    // Load the content
+    const content = await csv().fromFile("fake_data_20220802.csv");
+
+    // output
+    console.log(content);
+})();

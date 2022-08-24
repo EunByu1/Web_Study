@@ -1,3 +1,4 @@
+// -----------------------------------------------------------------------------
 // Import dependencies
 const csv = require("csvtojson");
 
@@ -9,3 +10,87 @@ const csv = require("csvtojson");
     // output
     console.log(content);
 })();
+// -----------------------------------------------------------------------------
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Import dependencies
+const csv = require("csvtojson");
+
+const temp = (async () => {
+    // Load the csv data
+    const Temp_data = await csv().fromFile("Setting\\convert\\temp.csv");
+
+    temp_mon = Temp_data[0].Mon
+    temp_tue = Temp_data[0].Tue
+    temp_wed = Temp_data[0].Wed
+    temp_thu = Temp_data[0].Thu
+    temp_fri = Temp_data[0].Fri
+    temp_sat = Temp_data[0].Sat
+    temp_sun = Temp_data[0].Sun
+
+    return [temp_mon, temp_tue, temp_wed, temp_thu, temp_fri, temp_sat, temp_sun]
+})();
+
+
+
+
+const humidity = (async () => {
+
+    // Load the csv data
+
+    const Humidity_data = await csv().fromFile("Setting\\convert\\humidity.csv");
+
+
+    humidity_mon = Humidity_data[0].Mon
+    humidity_tue = Humidity_data[0].Tue
+    humidity_wed = Humidity_data[0].Wed
+    humidity_thu = Humidity_data[0].Thu
+    humidity_fri = Humidity_data[0].Fri
+    humidity_sat = Humidity_data[0].Sat
+    humidity_sun = Humidity_data[0].Sun
+
+    return [humidity_mon, humidity_tue, humidity_wed, humidity_thu, humidity_fri, humidity_sun]
+})(); 
+
+
+
+const metter = (async () => {
+
+    // Load the csv data
+    const Metter_data = await csv().fromFile("Setting\\convert\\metter.csv");
+    
+
+    metter_mon = Metter_data[0].Mon
+    metter_tue = Metter_data[0].Tue
+    metter_wed = Metter_data[0].Wed
+    metter_thu = Metter_data[0].Thu
+    metter_fri = Metter_data[0].Fri
+    metter_sat = Metter_data[0].Sat
+    metter_sun = Metter_data[0].Sun
+
+    return [metter_mon, metter_tue, metter_wed, metter_thu, metter_fri, metter_sat, metter_sun]
+})();
+// -----------------------------------------------------------------------------
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// 1. node.js의 fs모듈 추출
+const fs = require('fs');
+
+// 2. csv파일 읽기
+const temp_file_csv = fs.readFileSync('Setting\\convert\\temp.csv');
+
+
+// 3. string으로 변환: fs로 읽은 Buffer를 문자열로 변환합니다.
+const temp_string_csv = temp_file_csv.toString().split(",");
+const temp_data = temp_string_csv.map((i) => Number(i))
+
+console.log(temp_data);
+// -----------------------------------------------------------------------------
